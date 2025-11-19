@@ -80,7 +80,7 @@ You can also enable our **Path Drop Guidance** by setting `path_drop_guidance: t
 This repo is built upon [SiT](https://github.com/willisma/SiT) and [REPA](https://github.com/sihyun-yu/REPA/tree/main/preprocessing).
 
 ## Contact
-If you have any questions, please create an issue on this repository or contact at gg933@korea.ac.kr.
+If you have any questions, please create an issue on this repository or contact at koparkrea@gmail.com.
 
 ## Citation
 If you find our work interesting, please consider giving a ⭐ and citation.
