@@ -1,0 +1,87 @@
+logging:
+  output_dir: "exps"
+  project_name: "SPRINT"
+  exp_name: "SPRINT_XL_ImageNet256_ft"  # required; must be set by user
+  logging_dir: "logs"
+  report_to: "wandb"  # choices: [tensorboard, wandb, both]
+
+compile:
+  enabled: true                   # Enable torch.compile
+  mode: default          # Options: default, reduce-overhead, max-autotune
+  backend: inductor              # Backend to use (inductor is recommended)
+  fullgraph: false                 # Try to compile the entire graph (slower compile, faster runtime)
+  dynamic: false                    # Dynamic shapes handling (null=auto, true/false=explicit)
+
+model:
+  arch: "SiT"
+  type: 'XL'
+  network_config:
+    context_size: 32
+    patch_size: 2
+    in_channels: 4
+    num_classes: 1000
+    class_dropout_prob: 0.1
+    use_swiglu_large: true
+    q_norm: RMSNorm
+    k_norm: RMSNorm
+    representation_align: false
+    representation_depth: 8
+    encoder_depth: 2
+    middle_depth: 24
+    decoder_depth: 2
+    use_mask_restore: true
+    cfg_mask_prob: 0.1
+    residual_type: concat_linear
+    use_checkpoint: false
+
+dataset:
+  data_dir: "datasets/imagenet256"
+  resolution: 256
+  batch_size: 1024
+  num_workers: 4
+  prefetch_factor: 2
+  persistent_workers: true
+  pin_memory: true
+
+optimization:
+  allow_tf32: True
+  mixed_precision: "bf16"  # choices: [no, fp16, bf16]
+  epochs: 1400
+  resume_step: 1
+  max_train_steps: 200000
+  gradient_accumulation_steps: 1
+  learning_rate: 2e-4
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_weight_decay: 0.0
+  adam_epsilon: 1e-8
+  max_grad_norm: 1.0
+  seed: 0
+  finetune: true
+  ckpt: exps/SPRINT_XL_ImageNet256/checkpoints/model_1.safetensors   # replace with your own checkpoint
+  warmup_steps: 5000
+
+loss:
+  path_type: "linear"       # choices: [linear, cosine]
+  prediction: "v"           # choices: [v]
+  cfg_prob: 0.1
+  enc_type: None
+  # enc_type: "dinov2-vit-b"  # uncomment to use DINOv2 ViT-B as encoder
+  proj_coeff: 0.5
+  weighting: lognormal  # choices: [lognormal, uniform]
+
+  mask_config:
+    mask_ratio: 0.0
+    mask_type: "structured_with_random_offset"
+
+evaluation:
+  checkpointing_steps: 10000
+  checkpointing_steps_list: [100000, 200000]
+  checkpoints_total_limit: 5
+  ref_path: "statistics/VIRTUAL_imagenet256_labeled.npz"   # replace with your own reference path
+  sampling_steps: 5000
+  eval_fid: false
+  evaluation_steps: 10000
+  evaluation_number_samples: 10000
+  evaluation_batch_size: 50
+  evaluation_num_steps: 50
