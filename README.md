@@ -67,11 +67,11 @@ PDG generates samples nearly 2× faster than vanilla CFG sampling, while also im
 
 ## Checkpoints on ImageNet 256 & 512
 
-| Model                       | Res. | FDD (PDG) | FID (PDG) | FDD (CFG) | FID (CFG) |
-|:----------------------------|:----:|---------:|----------:|---------:|----------:|
-| SiT-XL/2 + SPRINT           | 256  |    58.4  |    1.62   |    75.4  |    1.96   |
-| SiT-XL/2 + SPRINT + REPA    | 256  |    54.7  |    1.59   |    75.6  |    1.87   |
-| SiT-XL/2 + SPRINT           | 512  |    46.9  |    2.55   |    53.6  |    2.23   |
+| Model                    | Res. | Epoch | FDD (PDG) | FID (PDG) | FDD (CFG) | FID (CFG) |
+|:-------------------------|:----:|:-----:|----------:|----------:|----------:|----------:|
+| SiT-XL/2 + SPRINT        | 256  |  400  |    58.4   |    1.62   |    75.4   |    1.96   |
+| SiT-XL/2 + SPRINT + REPA | 256  |  400  |    54.7   |    1.59   |    75.6   |    1.87   |
+| SiT-XL/2 + SPRINT        | 512  |  400  |    46.9   |    1.96   |    53.6   |    2.23   |
 
 ## Acknowledgements
 This repo is built upon [SiT](https://github.com/willisma/SiT) and [REPA](https://github.com/sihyun-yu/REPA/tree/main/preprocessing).
