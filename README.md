@@ -35,7 +35,7 @@ Furthermore, during inference, our Path-Drop Guidance (PDG) nearly ***halves inf
 ## ⚙️ Enviroment
 To install requirements, run:
 ```bash
-git clone https://github.com/mlvlab/sprint.git
+git clone https://github.com/snap-research/Sprint.git
 cd sprint
 conda create -n sprint python==3.12.10-
 conda activate sprint
