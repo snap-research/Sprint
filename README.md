@@ -20,7 +20,7 @@ Furthermore, during inference, our Path-Drop Guidance (**PDG**) nearly *halves i
 - [ ] Release the pre-trained model.
 
 
-### ⚙️ Enviroment
+## ⚙️ Enviroment
 To install requirements, run:
 ```bash
 git clone https://github.com/snap-research/Sprint.git
@@ -32,11 +32,11 @@ pip install requirements.txt
 ```
 
 
-### Data Preparation
+## Data Preparation
 We provide experiments for ImageNet (Download it from [here](https://www.kaggle.com/competitions/imagenet-object-localization-challenge/data)). We follow the preprocessing guide from [here](https://github.com/sihyun-yu/REPA/tree/main/preprocessing).
 
 
-## 🔥 Training
+## Training
 You can modify the training configuration files in `config/train`.
 
 To enable the DINOv2 alignment loss (e.g., REPA), set:
@@ -44,13 +44,13 @@ To enable the DINOv2 alignment loss (e.g., REPA), set:
 - `enc_type` to `dinov2-vit-b`
 
 Intermediate checkpoints and configuration files will be saved in the `exps` folder by default.
-#### Step 1. Pre-train DiT with SPRINT using 75% token dropping
+#### Pre-train DiT with SPRINT using 75% token dropping
 
 ```bash
 accelerate launch --multi_gpu --num_processes=8 train.py --config config/train/SIT_XL_SPRINT_256.yaml
 ```
 
-#### Step2. Finetune DiT with full-tokens
+#### Finetune DiT with full-tokens
 ```bash
 accelerate launch --multi_gpu --num_processes=8 train.py --config config/train/SIT_XL_SPRINT_256_ft.yaml
 ```
@@ -65,7 +65,7 @@ accelerate launch --multi_gpu --num_processes=8 sample_ddp.py --config config/ev
 You can also enable our **Path-Drop Guidance (PDG)** by setting `path_drop_guidance` to  `true` in the config file and tuning the guidance scale as desired.
 PDG generates samples nearly 2× faster than vanilla CFG sampling, while also improving sample quality.
 
-### Checkpoints on ImageNet 256 & 512
+## Checkpoints on ImageNet 256 & 512
 
 | Model                       | Res. | FDD (PDG) | FID (PDG) | FDD (CFG) | FID (CFG) |
 |:----------------------------|:----:|---------:|----------:|---------:|----------:|
