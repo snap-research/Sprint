@@ -37,11 +37,15 @@ We provide experiments for ImageNet (Download it from [here](https://www.kaggle.
 
 
 ## Training
-You can modify the training configuration files in `config/train`.
-
-To enable the DINOv2 alignment loss (e.g., REPA), set:
-- `representation_align` to `true`
-- `enc_type` to `dinov2-vit-b`
+You can modify the training configuration files in `config/train`:
+- `encoder_depth`: Depth of dense shallow layer
+- `middle_depth`: Depth of sparse deep layer
+- `decoder_depth`: Depth of final decoder layer
+- `residual_type`: `concat_linear`
+- `mask_ratio`: Any ratio between 0 to 1
+- `mask_type`: `[random, structured_with_random_offset]`
+- `representation_align`: `true` to enable the DINOv2 alignment loss (e.g., REPA)
+- `representation_depth`: Any values between 1 to the depth of the model
 
 Intermediate checkpoints and configuration files will be saved in the `exps` folder by default.
 #### Pre-train DiT with SPRINT using 75% token dropping
