@@ -63,8 +63,8 @@ accelerate launch --multi_gpu --num_processes=8 train.py --config config/train/S
 You can modify the inference configuration in `config/eval`.  
 - Update the `ckpt_path` field to point to your trained model or one of the provided checkpoints.
 - Generated samples will be saved to the `samples` folder by default.
-- You can also enable our **Path-Drop Guidance (PDG)** by setting `path_drop_guidance` to  `true` in the config file and tuning the guidance scale as desired.
-PDG generates samples nearly 2× faster than vanilla CFG sampling, while also improving sample quality.
+- You can also enable our **Path-Drop Guidance (PDG)** by setting `path_drop_guidance` to  `true` in the config file. PDG generates samples nearly 2× faster than vanilla CFG sampling, while also improving sample quality.
+- Feel free to tune the `cfg_scale` as desired.
 
 ```bash
 accelerate launch --multi_gpu --num_processes=8 sample_ddp.py --config config/eval/SiT_XL_SPRINT.yaml
