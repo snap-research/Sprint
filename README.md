@@ -25,10 +25,10 @@ To install requirements, run:
 ```bash
 git clone https://github.com/snap-research/Sprint.git
 cd sprint
-conda create -n sprint python==3.12.10
+conda create -n bfm python==3.12
 conda activate sprint
-pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 xformer --index-url https://download.pytorch.org/whl/cu126
-pip install requirements.txt
+pip install torch==2.7.1 torchvision==0.22.1 torchaudio==2.7.1 xformers --index-url https://download.pytorch.org/whl/cu126
+pip install -r requirements.txt
 ```
 
 
