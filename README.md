@@ -51,12 +51,12 @@ Intermediate checkpoints and configuration files will be saved in the `exps` fol
 #### Pre-train DiT with SPRINT using 75% token dropping
 
 ```bash
-accelerate launch --multi_gpu --num_processes=8 train.py --config config/train/SIT_XL_SPRINT_256.yaml
+accelerate launch --multi_gpu --num_processes=8 train.py --config configs/train/SIT_XL_SPRINT_256.yaml
 ```
 
 #### Finetune DiT with full-tokens
 ```bash
-accelerate launch --multi_gpu --num_processes=8 train.py --config config/train/SIT_XL_SPRINT_256_ft.yaml
+accelerate launch --multi_gpu --num_processes=8 train.py --config configs/train/SIT_XL_SPRINT_256_ft.yaml
 ```
 
 ## Inference
@@ -67,7 +67,7 @@ You can modify the inference configuration in `config/eval`.
 - Feel free to tune the `cfg_scale` as desired.
 
 ```bash
-accelerate launch --multi_gpu --num_processes=8 sample_ddp.py --config config/eval/SiT_XL_SPRINT.yaml
+accelerate launch --multi_gpu --num_processes=8 sample_ddp.py --config configs/eval/SiT_XL_SPRINT.yaml
 ```
 
 
