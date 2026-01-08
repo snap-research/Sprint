@@ -4,8 +4,6 @@
 *.pth
 *.egg-info
 *.mp4
-*.png
-*.jpg
 *.npz
 *.safetensors
 /outputs
