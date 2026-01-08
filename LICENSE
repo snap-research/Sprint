@@ -1,0 +1,42 @@
+Snap Inc. Non-Commercial License
+
+Copyright © 2026 Snap Inc. All rights reserved.
+
+This sample code is made available by Snap Inc. for non-commercial, research purposes only.
+Non-commercial means not intended for or directed towards commercial advantage or monetary
+compensation. Research purposes mean solely for academic study, instruction, or
+non-commercial research, testing or validation.
+
+No commercial license, whether implied or otherwise, is granted in or to this sample code or any
+related patents, unless you have entered into a separate agreement with Snap Inc. for such
+rights.
+
+This sample code is provided as-is, without warranty of any kind, express or implied, including
+any warranties of merchantability, title, fitness for a particular purpose, non-infringement, or that
+the code is free of defects, errors or viruses. In no event will Snap Inc. be liable for any
+damages or losses of any kind arising from this sample code or your use thereof.
+Any redistribution of this sample code, including in binary form, must retain or reproduce this
+license text including all copyright notices, conditions and disclaimers.
+
+Third-Party Software
+
+This sample code may include or interact with the following third-party software, each of which is
+governed by its own respective license. If you spot an issue or believe attribution is missing,
+please reach out to us at opensource@snap.com.
+
+SiT
+Copyright © 2026 willisma.
+The SiT project can be found at: https://github.com/willisma/SiT.
+This software is licensed under the MIT License. A copy of the license can be found here.
+
+REPA
+Copyright © 2024 Sihyun Yu.
+The REPA project can be found at: https://github.com/sihyun-yu/REPA.
+This software is licensed under the MIT License. A copy of the license can be found at:
+https://github.com/sihyun-yu/REPA/blob/main/LICENSE.
+
+pytorch-image-models
+Copyright 2019 Ross Wightman.
+The pytorch-image-models project can be found at:
+https://github.com/huggingface/pytorch-image-models.
+This software is licensed under the Apache License, Version 2.0. A copy of the license c
