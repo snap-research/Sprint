@@ -18,7 +18,15 @@ Furthermore, during inference, our Path-Drop Guidance (**PDG**) nearly *halves i
 ### ✅ TODO
 - [x] Release training code.
 - [x] Release inference (sampling) code.
-- [ ] Release the pre-trained model.
+- [ ] Release the pre-trained model. It will be released soon!
+
+## Checkpoints on ImageNet 256 & 512
+
+| Model                    | Res. | Epoch | FDD (PDG) | FID (PDG) | FDD (CFG) | FID (CFG) |
+|:-------------------------|:----:|:-----:|----------:|----------:|----------:|----------:|
+| SiT-XL/2 + SPRINT        | 256  |  400  |    58.4   |    1.62   |    75.4   |    1.96   |
+| SiT-XL/2 + SPRINT + REPA | 256  |  400  |    54.7   |    1.59   |    75.6   |    1.87   |
+| SiT-XL/2 + SPRINT        | 512  |  400  |    46.9   |    1.96   |    53.6   |    2.23   |
 
 
 ## ⚙️ Enviroment
@@ -70,15 +78,6 @@ You can modify the inference configuration in `config/eval`.
 ```bash
 accelerate launch --multi_gpu --num_processes=8 sample_ddp.py --config configs/eval/SiT_XL_SPRINT.yaml
 ```
-
-
-## Checkpoints on ImageNet 256 & 512
-
-| Model                    | Res. | Epoch | FDD (PDG) | FID (PDG) | FDD (CFG) | FID (CFG) |
-|:-------------------------|:----:|:-----:|----------:|----------:|----------:|----------:|
-| SiT-XL/2 + SPRINT        | 256  |  400  |    58.4   |    1.62   |    75.4   |    1.96   |
-| SiT-XL/2 + SPRINT + REPA | 256  |  400  |    54.7   |    1.59   |    75.6   |    1.87   |
-| SiT-XL/2 + SPRINT        | 512  |  400  |    46.9   |    1.96   |    53.6   |    2.23   |
 
 ## Acknowledgements
 This repo is built upon [SiT](https://github.com/willisma/SiT) and [REPA](https://github.com/sihyun-yu/REPA/tree/main/preprocessing).
