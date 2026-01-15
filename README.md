@@ -13,7 +13,7 @@ Furthermore, during inference, our Path-Drop Guidance (**PDG**) nearly *halves i
 
 <h4 align="center">Generated ImageNet 512×512 results by SPRINT with our Path-Drop Guidance</h4>
 <div align="center">
-  <img src="assets/512_results.png" width="80%" />
+  <img src="assets/512_results.png" width="100%" />
 </div>
 
 
