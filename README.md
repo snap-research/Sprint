@@ -11,7 +11,7 @@
 Notably, on ImageNet-1K 256x256, SPRINT achieves upto *9.8× training savings* with comparable or superior FID/FDD. 
 Furthermore, during inference, our Path-Drop Guidance (**PDG**) nearly *halves inference FLOPs* compared to standard CFG sampling while improving quality.
 
-<h4 align="center">Generated ImageNet 512×512 results by SPRINT with our Path-Drop Guidance</h4>
+<h4 align="center">Generated ImageNet 512×512 results by SiT-XL/2 + SPRINT with our Path-Drop Guidance</h4>
 <div align="center">
   <img src="assets/512_results.png" width="100%" />
 </div>
