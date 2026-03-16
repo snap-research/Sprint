@@ -21,15 +21,16 @@ Furthermore, during inference, our Path-Drop Guidance (**PDG**) nearly *halves i
 ### ✅ TODO
 - [x] Release training code.
 - [x] Release inference (sampling) code.
-- [ ] Release the pre-trained model. It will be released soon!
+- [x] Release the pre-trained model. It will be released soon!
 
 ## Checkpoints on ImageNet 256 & 512
+Click the model's link to download the checkpoints.
 
 | Model                    | Res. | Epoch | FDD (PDG) | FID (PDG) | FDD (CFG) | FID (CFG) |
 |:-------------------------|:----:|:-----:|----------:|----------:|----------:|----------:|
-| SiT-XL/2 + SPRINT        | 256  |  400  |    58.4   |    1.62   |    75.4   |    1.96   |
-| SiT-XL/2 + SPRINT + REPA | 256  |  400  |    54.7   |    1.59   |    75.6   |    1.87   |
-| SiT-XL/2 + SPRINT        | 512  |  400  |    46.9   |    1.96   |    53.6   |    2.23   |
+| [SiT-XL/2 + SPRINT](https://huggingface.co/snap-research/SPRINT/resolve/main/sprint_XL_imagenet256.safetensors)        | 256  |  400  |    58.4   |    1.62   |    75.4   |    1.96   |
+| [SiT-XL/2 + SPRINT + REPA](https://huggingface.co/snap-research/SPRINT/resolve/main/sprint_XL_REPA_imagenet256.safetensors) | 256  |  400  |    54.7   |    1.59   |    75.6   |    1.87   |
+| [SiT-XL/2 + SPRINT](https://huggingface.co/snap-research/SPRINT/resolve/main/sprint_XL_imagenet512.safetensors)        | 512  |  400  |    46.9   |    1.96   |    53.6   |    2.23   |
 
 
 ## ⚙️ Enviroment
