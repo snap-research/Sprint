@@ -1,10 +1,10 @@
 <p align="center">
-  <h1 align="center">[ICLR'26] SPRINT: Sparse-Dense Residual Fusion for Efficient Diffusion Transformers</h1>
+  <h1 align="center">SPRINT: Sparse-Dense Residual Fusion for Efficient Diffusion Transformers</h1>
   <p align="center">
     <a href="https://snap-research.github.io/Sprint" target='_blank'><img src="https://img.shields.io/badge/🐳-Project%20Page-blue"></a>
     <a href="https://arxiv.org/abs/2510.21986" target='_blank'><img src="https://img.shields.io/badge/arXiv-2407.16125-b31b1b.svg"></a>
   </p>
-  This repository is an official implementation of "SPRINT: Sparse-Dense Residual Fusion for Efficient Diffusion Transformer".
+  This repository is an official implementation of "SPRINT: Sparse-Dense Residual Fusion for Efficient Diffusion Transformer". Accepted at ICLR'26.
 </p>
 
 **TL;DR** We introduce **SPRINT**, a simple and general framework that enables training diffusion transformers with aggressive token dropping (up to 75%) and minimal architectural modification, while preserving representation quality. 
